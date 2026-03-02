@@ -1,0 +1,220 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a252f;
+    color: #ecf0f1;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.game-info {
+    font-size: 20px;
+    color: #f1c40f;
+    min-height: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.poker-table {
+    background-color: #27ae60;
+    border-radius: 120px;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    border: 12px solid #2ecc71;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.6), 0 10px 20px rgba(0, 0, 0, 0.4);
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pot-container {
+    font-size: 24px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    color: #f1c40f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.community-cards {
+    display: flex;
+    gap: 15px;
+    min-height: 100px;
+    justify-content: center;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover:not(:disabled) {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+}
+
+#foldBtn {
+    background-color: #e74c3c;
+}
+
+#foldBtn:hover:not(:disabled) {
+    background-color: #c0392b;
+}
+
+#startBtn {
+    background-color: #9b59b6;
+}
+
+#startBtn:hover:not(:disabled) {
+    background-color: #8e44ad;
+}
+
+#raiseBtn {
+    background-color: #e67e22;
+}
+
+#raiseBtn:hover:not(:disabled) {
+    background-color: #d35400;
+}
+
+.players-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.player-box {
+    background-color: #2c3e50;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.player-box.human-player {
+    border: 2px solid #3498db;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
+}
+
+.player-box.folded {
+    opacity: 0.5;
+    transform: scale(0.95);
+}
+
+.player-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.player-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.player-chips {
+    color: #2ecc71;
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.player-bet {
+    font-size: 14px;
+    color: #bdc3c7;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.cards {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.card {
+    background-color: white;
+    color: #2c3e50;
+    width: 65px;
+    height: 95px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    /* Animation for drawing cards */
+    animation: drawCard 0.4s ease-out forwards;
+}
+
+.card.red {
+    color: #e74c3c;
+}
+
+.card.hidden {
+    background-color: #c0392b;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #e74c3c 10px, #e74c3c 20px);
+    border: 2px solid #ecf0f1;
+    color: transparent;
+}
+
+@keyframes drawCard {
+    from {
+        transform: translateY(-50px) scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}

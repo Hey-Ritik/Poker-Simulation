@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas Hold'em Lite (Web Version)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Texas Hold'em Lite Simulation</h1>
+        <h1>Object Oriented Programming with Java<h1>
+        <h1>Internal Project<h1>
+ 
+
+
+        <div class="game-info" id="gameInfo">
+            Click "Start Round" to play!
+        </div>
+
+        <div class="poker-table">
+            <div class="pot-container">
+                Pot: <span id="potAmount">0</span> Chips
+            </div>
+            <!-- Center area for community cards (Flop, Turn, River) -->
+            <div class="community-cards" id="communityCards">
+                <!-- Cards will be injected by JavaScript here -->
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn">Start Round</button>
+            <button id="foldBtn" disabled>Fold</button>
+            <button id="callBtn" disabled>Call</button>
+            <button id="raiseBtn" disabled>Raise (+50)</button>
+        </div>
+
+        <div class="players-container" id="playersContainer">
+            <!-- Player sections via JS -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
