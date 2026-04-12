@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas Hold'em Poker Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="poker-container">
+        <!-- Game Info: Status and Pot -->
+        <div class="game-info">
+            <h2 id="game-status">Press "New Round" to Play</h2>
+            <div class="pot-display">Pot: $<span id="pot-amount">0</span></div>
+        </div>
+
+        <!-- Community Cards Area -->
+        <div id="community-cards" class="community-cards">
+            <!-- Cards will be injected here -->
+        </div>
+
+        <!-- Players Area -->
+        <div id="players-container" class="players-container">
+            <!-- 6 Players will be injected here by JS -->
+        </div>
+
+        <!-- Controls Panel -->
+        <div class="controls-panel">
+            <div class="action-buttons">
+                <button id="fold-btn" disabled>Fold</button>
+                <button id="call-btn" disabled>Call</button>
+                <button id="raise-btn" disabled>Raise ($50)</button>
+            </div>
+            <button id="next-stage-btn" class="next-stage-btn">New Round</button>
+        </div>
+    </div>
+
+    <!-- Main Logic Script -->
+    <script src="script.js"></script>
+</body>
+</html>
