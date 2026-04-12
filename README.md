@@ -32,17 +32,19 @@ This project was built using a clean Object-Oriented approach to demonstrate cor
 ## 🚀 How to Run
 
 1. Clone or download this repository.
-2. Locate the `index.html` file in the project folder.
-3. Open `index.html` in any modern web browser (Chrome, Firefox, Edge, etc.).
+2. Locate the `index.html` file inside the `web` folder.
+3. Open `web/index.html` in any modern web browser (Chrome, Firefox, Edge, etc.).
 4. Click **"New Round"** to start the simulation!
 
 ## 📁 Project Structure
 
 ```text
-├── index.html      # Main game structure and UI elements
-├── style.css       # Table layout, player positioning, and animations
-├── script.js      # Core game logic, OOP classes, and hand evaluation
-└── README.md       # Project documentation
+├── web/
+│   ├── index.html      # Main game structure and UI elements
+│   ├── style.css       # Table layout, player positioning, and animations
+│   └── script.js       # Core game logic, OOP classes, and hand evaluation
+├── java-project/       # Backend/Java implementation (if applicable)
+└── README.md           # Project documentation
 ```
 
 ## 👤 Author
