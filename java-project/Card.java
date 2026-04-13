@@ -45,8 +45,17 @@ public class Card {
     public Rank getRank() { return rank; }
     public int getValue() { return rank.getValue(); }
 
-    @Override
+ @Override
     public String toString() {
-        return rank.getName() + suit.getSymbol();
+        String suitName = "";
+
+        switch (suit) {
+            case SPADES: suitName = "SPADES"; break;
+            case HEARTS: suitName = "HEARTS"; break;
+            case DIAMONDS: suitName = "DIAMONDS"; break;
+            case CLUBS: suitName = "CLUBS"; break;
+        }
+
+        return rank.getName() + " of " + suitName;
     }
 }
