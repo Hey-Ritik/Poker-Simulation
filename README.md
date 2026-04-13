@@ -36,6 +36,20 @@ This project was built using a clean Object-Oriented approach to demonstrate cor
 3. Open `web/index.html` in any modern web browser (Chrome, Firefox, Edge, etc.).
 4. Click **"New Round"** to start the simulation!
 
+## 🧩 Implementations
+
+This project includes two implementations:
+
+1. **Java Console Version**
+   - Runs using javac and java
+   - Focuses on core OOP concepts
+
+2. **Web Version (JavaScript)**
+   - Runs in browser
+   - Includes UI and interactive gameplay
+
+This demonstrates how the same OOP design can be applied in different environments.
+
 ## 📁 Project Structure
 
 ```text
